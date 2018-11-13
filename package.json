@@ -1,0 +1,19 @@
+{
+  "name": "notassoapi",
+  "version": "1.0.0",
+  "description": "Simples microsserviço de exemplo para trabalho de SO 2018.2 BSI UNIRIO",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Ferraz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0"
+  }
+}

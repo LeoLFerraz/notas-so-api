@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API de Notas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+
+        body {
+            min-width: 80vw;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: lightcyan;
+        }
+
+        main {
+            padding: auto;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        table {
+            max-width: 40%;
+            margin: auto auto 25px auto;
+
+        }
+
+        td, th {
+            border: 2px solid #ddd;
+            padding: 8px;
+        }
+
+
+        th {
+            padding: 12px 12px;
+            text-align: center;
+            font-size: 30px;
+            background-color: #4CAF50;
+            color: #FFFFFF;
+        }
+
+        tr {
+            font-size: 20px;
+            background-color: #e0FFFF;
+        }
+
+        tr:nth-child(even){
+            background-color: #ecFFFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem vindo à API de Notas de Sistemas Operacionais 2018.2 para BSI-UNIRIO</h1>
+    </header>
+    <main>
+        <table border="1">
+            <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+            </tr>
+            <tr>
+                <td>Cadastrar CPF</td>
+                <td>Cadastra um novo CPF na aplicação. Espera um JSON contendo o CPF via POST e retorna um JSON com o CPF cadastrado em caso de sucesso.</td>
+                <td>POST na URL /api/cpfs/ <br>
+                    { <br>
+                        "cpf": "12345678900" <br>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>Cadastrar Nota</td>
+                <td>Cadastra uma nova nota atrelada a um dado CPF. Espera um JSON contendo a nota e o CPF via post e retorna um JSON com o CPF cadastrado em caso de sucesso.</td>
+                <td>POST na URL /api/cpfs/{cpf}/notas/ <br>
+                    { <br>
+                        "nota": 10.0 <br>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>Consultar Notas</td>
+                <td>Espera uma requisição padrão GET. Retorna um JSON com as notas do CPF consultado.</td>
+                <td>GET na URL /api/cpfs/{cpf}/notas/</td>
+            </tr>
+            <tr>
+                <td>Consultar Média</td>
+                <td>Espera uma requisição padrão GET. Retorna um JSON com a média aritmética das notas do CPF consultado.</td>
+                <td>GET na URL /api/cpfs/{cpf}/media/}</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>Por: Leonardo Ferraz</p>
+    </footer>
+</body>
+</html>

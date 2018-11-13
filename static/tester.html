@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client API Notas SO</title>
+</head>
+<body>
+    <h1>Cliente para Consumo da API de Notas de SO 2018.2 BSI-UNIRIO</h1>
+    <h2>Cadastro de Novo CPF</h2>
+    <form method="post" action="./api/cpfs">
+        <label for="cpfNovo">Cadastro de CPF</label>
+        <input type="text" maxlength="11" placeholder="00000000000" name="cpf" id="cpfNovo">
+    </form>
+    <br>
+    <form method="post">
+        <label for="cpfNota">CPF da Nota</label>
+        <input id="cpfNota" name="cpf" placeholder="00000000000" maxlength="11" type="text">
+        <label for="notaNova">Nota</label>
+        <input id="notaNova" name="nota" placeholder="10.0" maxlength="4" type="number">
+    </form>
+
+</body>
+</html>
